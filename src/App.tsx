@@ -4,9 +4,10 @@ import { ThemeProvider, useTheme } from "./components/theme-provider";
 import { ButtonEvents } from "./components/contant";
 import { FaGithub } from "react-icons/fa";
 function App() {
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const themRef = React.useRef<HTMLDivElement>(null);
+  setTheme("dark");
   function handleMouseMovement({
     clientX,
     clientY,
