@@ -3,17 +3,15 @@ import { Button } from "@/components/ui/button";
 import { ThemeProvider, useTheme } from "./components/theme-provider";
 import { ButtonEvents } from "./components/contant";
 import { FaGithub } from "react-icons/fa";
+import { ModeToggle } from "./components/mode-toggle";
 function App() {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const themRef = React.useRef<HTMLDivElement>(null);
-  setTheme("dark");
   function handleMouseMovement({
     clientX,
     clientY,
     currentTarget,
   }: React.MouseEvent) {
-    console.log(clientX, clientY, currentTarget);
     const { left, top } = currentTarget.getBoundingClientRect();
 
     const x = clientX - left;
@@ -25,7 +23,6 @@ function App() {
   return (
     <div
       onMouseMove={handleMouseMovement}
-      ref={themRef}
       style={{
         backgroundImage: `radial-gradient(circle at ${mousePosition.x}px ${
           mousePosition.y
@@ -33,6 +30,7 @@ function App() {
       }}
     >
       <ThemeProvider>
+        <ModeToggle />
         <div className="fixed justify-start items-center w-[50%] h-screen  ">
           <div
             className={`flex flex-col justify-start items-start w-full p-[10%] bg-${theme}-bg text-${theme}-fg text-[6rem]`}
