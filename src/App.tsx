@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeProvider, useTheme } from "./components/theme-provider";
-import { ModeToggle } from "./components/mode-toggle";
 import { ButtonEvents } from "./components/contant";
 import { FaGithub } from "react-icons/fa";
 function App() {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const themRef = React.useRef<HTMLDivElement>(null);
   function handleMouseMovement({
