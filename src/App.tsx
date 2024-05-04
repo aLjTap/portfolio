@@ -6,7 +6,6 @@ import { FaGithub } from "react-icons/fa";
 
 function App() {
   const { theme, setTheme } = useTheme();
-  setTheme("dark");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   function handleMouseMovement({
     clientX,
@@ -23,6 +22,7 @@ function App() {
 
   return (
     <ThemeProvider>
+      <>{setTheme("dark")}</>
       <div
         onMouseMove={handleMouseMovement}
         style={{
