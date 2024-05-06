@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ButtonEvents } from "./components/contant";
+import { ButtonEvents, contants } from "./components/contant";
 import { FaGithub } from "react-icons/fa";
+import { Card, CardDescription, CardTitle } from "./components/ui/card";
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -21,55 +22,81 @@ function App() {
   return (
     <div
       onMouseMove={handleMouseMovement}
-      className="flex w-screen h-screen bg-[#080c19] text-white"
+      className="flex flex-col md:flex-row w-[100%] h-[100%] bg-[#080c19] "
       style={{
         backgroundImage: `radial-gradient(circle at ${mousePosition.x}px ${
           mousePosition.y
         }px, ${"rgb(15 23 42)"} 1%, transparent 45%)`,
       }}
     >
-      <div className="fixed justify-start items-center w-[50%] h-screen  ">
+      <div className="flex md:fixed flex-col justify-start items-center h-[50%] md:h-full w-full md:w-[50%] ">
         <div
-          className={`flex flex-col justify-start items-start w-full p-[10%] text-[6rem]`}
+          className={`flex flex-col justify-start items-start  w-full p-[13%] text-[200%] md:text-[500%] text-white opacity-80`}
         >
-          Ali Tap
-          <div className={`text-lg opacity-50 `}>
-            I am a computer engineer student at the Istanbul Esenyurt
-            University. I am interested in software development and I am trying
-            to improve myself in this field.
+          {contants.name}
+          <div
+            className={`flex w-full text-[20%] sm:text-sm md:text-lg lg:text-xl opacity-50 text-white`}
+          >
+            {contants.description}
           </div>
         </div>
-        <div className="flex flex-col justify-start items-start w-full p-[10%] gap-2">
+        <div className="hidden md:flex md:flex-col justify-start items-start invisible md:visible w-full p-[11%]   ">
           {ButtonEvents.map((event) => (
             <Button
-              className={`flex bg-transparent  text-black-fg hover:scale-[1.1] hover:bg-transparent border-2 transition-all opacity-60 hover:opacity-100`}
+              className={`flex flex-row gap-y-[10%] bg-transparent  hover:scale-[1.1] hover:bg-transparent  transition-all text-[130%] opacity-60 hover:opacity-100 text-white `}
               key={event}
               onClick={() => {
                 console.log(event);
               }}
               size={"sm"}
             >
-              {event}
+              {`${event}`}
             </Button>
           ))}
         </div>
-        <FaGithub className="fixed top-[90%] left-[5%]" size={40} />
+        <div className="flex flex-row justify-start items-end px-[13%]  w-full h-full gap-[10%] md:gap-[8%] ">
+          {Object.keys(contants.socials).map((social) => {
+            const { link, icon } =
+              contants.socials[social as keyof typeof contants.socials];
+            return (
+              <a
+                key={social}
+                href={link}
+                className="flex justify-start items-start text-[140%] md:text-[200%]  text-white opacity-50 hover:opacity-100"
+              >
+                {icon}
+              </a>
+            );
+          })}
+        </div>
       </div>
-      <div className="flex flex-row w-screen h-screen">
-        <div className="flex w-[50%] h-full"></div>
-        <div className="flex w-[50%] h-full">
-          {/* about me */}
-          <div>
-            <div className="justify-start items-start px-[10%] py-[15%] text-lg opacity-50 text-white">
-              I first started programming in 2020 while studying Computer and
-              Information Technologies Instructor at Yildiz Technical University
-              in 2020. Basically, I mainly worked on C programming. In 2023, I
-              left Yildiz Technical University and started the Computer
-              Engineering department at Istanbul Esenyurt University. In these 3
-              years, I have been involved in many project studies. In November
-              2023, I entered the Starloop team, which carried out slang work on
-              Hyperloop technology, as the Communication team Responsible and I
-              was involved in many slang studies within the team.
+      <div className="flex flex-col  md:flex-row w-full h-full">
+        <div className="flex  w-full h-[30%]"></div>
+        <div className="flex  w-full  h-full">
+          <div className="flex flex-col gap-10 sm:gap-[5%] justify-start items-start px-[14%] py-[17%] text-[20%] sm:text-sm md:text-lg lg:text-xl   text-white">
+            <div>
+              <div className="flex opacity-100">{contants.aboutMe.title}</div>
+              <div className="flex opacity-50">{contants.aboutMe.content}</div>
+            </div>
+            <div className="flex flex-col gap-11 -mx-[4%]">
+              {Object.keys(contants.projects).map((project) => {
+                const { title, date, content } =
+                  contants.projects[project as keyof typeof contants.projects];
+                return (
+                  <Card
+                    key={project}
+                    className="flex flex-col bg-transparent border-transparent  hover:bg-gradient-to-br hover:from-[#1f2d4f] hover:to-[#1f2d4f]  animate-out"
+                  >
+                    <CardTitle className="text-white p-[4%] text-[20%] sm:text-sm md:text-lg lg:text-xl">
+                      {title}
+                    </CardTitle>
+                    <CardDescription className="p-[4%]">{date}</CardDescription>
+                    <CardDescription className="p-[4%] sm:text-sm md:text-lg lg:text-xl ">
+                      {content}
+                    </CardDescription>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </div>
