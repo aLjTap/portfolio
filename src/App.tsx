@@ -34,7 +34,7 @@ function App() {
         >
           {contants.name}
           <div
-            className={`flex w-full text-[20%] sm:text-sm md:text-lg lg:text-xl opacity-50 text-white`}
+            className={`flex w-full text-xl  md:text-3xl opacity-50 text-white`}
           >
             {contants.description}
           </div>
@@ -72,7 +72,7 @@ function App() {
       <div className="flex flex-col  md:flex-row w-full h-full">
         <div className="flex  w-full h-[30%]"></div>
         <div className="flex  w-full  h-full">
-          <div className="flex flex-col gap-10 sm:gap-[5%] justify-start items-start px-[14%] py-[17%] text-[20%] sm:text-sm md:text-lg lg:text-xl   text-white">
+          <div className="flex flex-col gap-10 sm:gap-[5%] justify-start items-start px-[14%] py-[17%] text-sm md:text-lg  xl:text-xl   text-white">
             <div>
               <div className="flex opacity-100">{contants.aboutMe.title}</div>
               <div className="flex opacity-50">{contants.aboutMe.content}</div>
@@ -86,7 +86,7 @@ function App() {
                     key={project}
                     className="flex flex-col bg-transparent border-transparent  hover:bg-gradient-to-br hover:from-[#1f2d4f] hover:to-[#1f2d4f]  animate-out"
                   >
-                    <CardTitle className="text-white p-[4%] text-[20%] sm:text-sm md:text-lg lg:text-xl">
+                    <CardTitle className="text-white p-[4%] text-xl  md:text-3xl">
                       {title}
                     </CardTitle>
                     <CardDescription className="p-[4%]">{date}</CardDescription>
