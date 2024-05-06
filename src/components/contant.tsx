@@ -1,5 +1,4 @@
 import { Mail } from "lucide-react";
-import { title } from "process";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ButtonEvents, contants } from "./components/contant";
-import { FaGithub } from "react-icons/fa";
 import { Card, CardDescription, CardTitle } from "./components/ui/card";
 
 function App() {
