@@ -146,7 +146,7 @@ function App() {
                 >
                   {contants.aboutMe.title}
                 </div>
-                <div className="flex opacity-50 text-sm md:text-lg  xl:text-xl ">
+                <div className="flex text-muted-foreground   text-sm md:text-lg  xl:text-xl ">
                   {contants.aboutMe.content}
                 </div>
               </div>
