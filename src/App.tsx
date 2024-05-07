@@ -214,7 +214,7 @@ function App() {
                         {contants.projects[
                           project as keyof typeof contants.projects
                         ].languages.map((language) => (
-                          <div className="flex justify-center items-center text-white text-[0.725rem] md:text-sm lg:text-pretty w-[20%] h-[100%] rounded-xl bg-gradient-to-br from-[#4d576f] to-[#1f2d4f]">
+                          <div className="flex justify-center items-center text-white text-[0.725rem] md:text-sm lg:text-pretty w-[25%] h-[100%] rounded-xl bg-gradient-to-br from-[#4d576f] to-[#1f2d4f]">
                             {language}
                           </div>
                         ))}
