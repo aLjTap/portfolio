@@ -45,15 +45,7 @@ export const contants = {
       date: "2023 - Present",
       content:
         "It is a web-based application that uses python web api for the database I developed to solve the problem caused by the inability of students living as 2 or more people to find an application to calculate the debt distribution of the products they buy at home.",
-      languages: [
-        "Python",
-        "TypeScript",
-        "HTML",
-        "CSS",
-        "React",
-        "FastAPI",
-        "Pydantic",
-      ],
+      languages: ["Python", "TypeScript", "HTML", "CSS", "React", "FastAPI", "Pydantic"],
       link: "https://github.com/aLjTap/multi-user-debt-calculator-for-chicken-and-rice--with-pydantic-",
     },
     portfolio: {
@@ -61,14 +53,7 @@ export const contants = {
       date: "2023 - Present",
       content:
         "I developed my portfolio website. Now you are on my portfolio website. I used the React library to develop the website.",
-      languages: [
-        "TypeScript",
-        "React",
-        "Html",
-        "Css",
-        "TailwindCss",
-        "Vercel",
-      ],
+      languages: ["TypeScript", "React", "Html", "Css", "TailwindCss", "Vercel"],
       link: "https://github.com/aLjTap/portfolio",
     },
   },
