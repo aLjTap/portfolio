@@ -1,13 +1,18 @@
 import { FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-export const ButtonEvents = ["About", "Experience", "Projects"];
+export const ButtonEvents = [
+  "About",
+  "Work Experience",
+  "Honours",
+  "Volunteering",
+  "Projects",
+];
 
-export const contants = {
+export const entryContents = {
   name: "Ali Tap",
-  title: "Student",
-  description:
-    "I am a computer engineer student at the Istanbul Esenyurt University. I am interested in software development and I am trying to improve myself in this field.",
+  title: "Software Engineer",
+  description: "Full-Stack Developer",
   socials: {
     github: {
       link: "https://github.com/aLjTap",
@@ -29,57 +34,71 @@ export const contants = {
   aboutMe: {
     title: "About",
     content:
-      "I first started programming in 2020 while studying Computer Information Technologies Instructor at Yildiz Technical University   in 2020. Basically, I mainly worked on C programming. In 2023, I  left Yildiz Technical University and started the Computer Engineering department at Istanbul Esenyurt University. In these 3 years, I have been involved in many project studies. In November 2023, I entered the Starloop team, which carried out slang work on Hyperloop technology, as the Communication team Responsible and I was involved in many slang studies within the team.",
+      "Due to my interest in science and technology, I became interested in programming and began studying C programming while attending Yıldız Technical University in 2020. Over the past 5 years, I have been involved in numerous projects ranging from embedded systems to network systems, web programming to game programming. Currently, I am a student seeking employment, and I am delighted to offer high-quality work to organizations interested in collaborating with me, as I am passionate about this field.",
+  },
+  workExperience: {
+    koza: {
+      title: "KOZA LLC",
+      role: "Software Developer",
+      location: "Wyoming, United States",
+      date: "10/12/2024 - 12/10/2025",
+      content:
+        "When I joined Koza, the company was a startup venture. I worked at Koza for a year as a full-stack developer. I worked on every aspect of the application, from server systems to front-end technologies, from start to finish. While working here, I gained a lot of experience in web and mobile technologies.",
+      link: "https://koza.academy",
+      image: "",
+    },
+  },
+  honours: {
+    teknofest: {
+      title: "Teknofest Hyperloop Competition 2024",
+      award: "2nd Place in Turkey",
+      institution: "Tübitak Teknofest",
+      date: "10/10/2024",
+      content:
+        "I participated in the Teknofest hyperloop category and won second place in Turkey.",
+      image: "teknofest.JPG",
+    },
+  },
+  volunteering: {
+    starloop: {
+      title: "Starloop",
+      role: "Communication Team Supervisor",
+      date: "November 2023 - 1/11/2024",
+      content:
+        "I am responsible for the communication team within Starloop. I worked on the optimisation of the embedded codes of STM32 and ESP32 microcontrollers for the Starloop Pod III communication system. I also designed an interface created with the electron framework, where system data can be read better and vehicle control is provided more easily, and I worked on the optimisation of the interface created with the existing QT application.",
+      image: "starloopUinew.png",
+    },
   },
   projects: {
     gameEngine: {
       title: "Game Engine",
-      date: "2023 - Present",
+      date: "10/07/2023",
       content:
-        "We built a simple game engine that can be used to create simple RPG games. The engine is based on the Entity-Component-System (ECS) pattern. Our purpose is to create a simple game that is fun to play and can be used to learn the basics of game development. ",
-      languages: ["TypeScript", "Phaser", "React", "Html", "Css"],
-      link: "https://github.com/DuoMuskeeters/Heroes-Journey-Phaser",
+        "We built a simple game engine that can be used to create simple RPG games. The engine is based on the Entity-Component-System (ECS) pattern. Our purpose is to create a simple game that is fun to play and can be used to learn the basics of game development. We had a lot of fun building it and we hope you will have fun playing it.",
+      gitLink: "",
+      link: "",
+      video: "promotion.mp4",
+      image: "",
     },
-    calculator: {
+    debtDistribution: {
       title: "Debt Distribution Application",
-      date: "2023 - Present",
+      date: "13/06/2023",
       content:
-        "It is a web-based application that uses python web api for the database I developed to solve the problem caused by the inability of students living as 2 or more people to find an application to calculate the debt distribution of the products they buy at home.",
-      languages: [
-        "Python",
-        "TypeScript",
-        "HTML",
-        "CSS",
-        "React",
-        "FastAPI",
-        "Pydantic",
-      ],
-      link: "https://github.com/aLjTap/multi-user-debt-calculator-for-chicken-and-rice--with-pydantic-",
+        "It is a web-based automation system that uses python web api for the database I developed to solve the problem caused by the inability of students living as 2 or more people to find an application to calculate the debt distribution of the products they buy at home.",
+      link: "https://zarganalar.vercel.app",
+      gitLink: "",
+      image: "",
+      video: "",
     },
-    portfolio: {
-      title: "Portfolio Website",
-      date: "2023 - Present",
+    coachingApp: {
+      title: "Coaching App",
+      date: "",
       content:
-        "I developed my portfolio website. Now you are on my portfolio website. I used the React library to develop the website.",
-      languages: [
-        "TypeScript",
-        "React",
-        "Html",
-        "Css",
-        "TailwindCss",
-        "Vercel",
-      ],
-      link: "https://github.com/aLjTap/portfolio",
-    },
-  },
-  experience: {
-    starloop: {
-      title: "Starloop",
-      date: "November 2023 - Present",
-      content:
-        "I am responsible for the communication team within Starloop. I worked on the optimisation of the embedded codes of STM32 and ESP32 microcontrollers for the Starloop Pod III communication system. I also designed an interface created with the electron framework, where system data can be read better and vehicle control is provided more easily, and I worked on the optimisation of the interface created with the existing QT application.",
-      images: ["StarloopUi.png", "StarloopUiLogin.png"],
-      languages: ["C", "C++", "Python", "Electron", "QT"],
+        "The Koç app offers a forum page where users can discuss various topics and track their progress, featuring calculators and guidance content for those interested in fitness and sports.",
+      link: "https://atalaythecoach.com",
+      gitLink: "",
+      image: "",
+      video: "",
     },
   },
 } as const;
